@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>25 + 5 Clock</title>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        class Clock extends React.Component {
+            constructor(props) {
+                super(props);
+            }
+
+            render() {
+                return (
+                    <div>
+                        <div id="break-label">break-length</div>
+                        <div id="break-length" value="5">5</div>
+                        <button id="break-decrement">break-decrement</button>
+                        <button id="break-increment">break-decrement</button>
+                        <br />
+                        <div id="session-label">session-length</div>
+                        <div id="session-length" value="25">25</div>
+                        <button id="session-decrement">break-decrement</button>
+                        <button id="session-increment">break-decrement</button>
+                        <br />
+                        <div id="timer-label">session|Break</div>
+                        <div id="time-left">60:00</div>
+                        <button id="start_stop">Start stop</button>
+                        <button id="reset">reset</button>
+                        <audio src="https://raw.githubusercontent.com/freeCodeCamp/cdn/master/build/testable-projects-fcc/audio/BeepSound.wav"
+                            id="beep"></audio>
+                    </div>
+                )
+            }
+        }
+        ReactDOM.render(<Clock />, document.getElementById('root'))
+    </script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
+</html>
