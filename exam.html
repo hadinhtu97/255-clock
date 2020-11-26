@@ -6,10 +6,11 @@
     <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="exam.css">
 </head>
 
 <body>
-    <div id="root" style="text-align: center;"></div>
+    <div id="root"></div>
     <script type="text/babel">
         class Clock extends React.Component {
             constructor(props) {
@@ -167,18 +168,32 @@
             render() {
                 return (
                     <div>
-                        <div id="break-label">break-length</div>
-                        <div id="break-length" value={this.state.break}>{this.state.break}</div>
-                        <button id="break-decrement" onClick={this.breakDecrement}>break-decrement</button>
-                        <button id="break-increment" onClick={this.breakIncrement}>break-decrement</button>
-                        <br />
-                        <br />
-                        <div id="session-label">session-length</div>
-                        <div id="session-length" value={this.state.session}>{this.state.session}</div>
-                        <button id="session-decrement" onClick={this.sessionDecrement}>session-decrement</button>
-                        <button id="session-increment" onClick={this.sessionIncrement}>session-decrement</button>
-                        <br />
-                        <br />
+                        <table>
+                            <tr>
+                                <td>
+                                    <div id="break-label">break-length</div>
+                                </td>
+                                <td>
+                                    <div id="session-label">session-length</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="break-length" value={this.state.break}>
+                                        <button id="break-decrement" onClick={this.breakDecrement}>break-decrement</button>
+                                        {this.state.break}
+                                        <button id="break-increment" onClick={this.breakIncrement}>break-decrement</button>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div id="session-length" value={this.state.session}>
+                                        <button id="session-decrement" onClick={this.sessionDecrement}>session-decrement</button>
+                                        {this.state.session}
+                                        <button id="session-increment" onClick={this.sessionIncrement}>session-decrement</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
                         <div id="timer-label">{this.state.currentTimber}</div>
                         <div id="time-left">{this.parseTime()}</div>
                         <button id="start_stop" onClick={this.startStop}>Start/stop</button>
@@ -191,7 +206,7 @@
         }
         ReactDOM.render(<Clock />, document.getElementById('root'))
     </script>
-    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
 </body>
 
 </html>
