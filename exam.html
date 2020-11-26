@@ -100,6 +100,7 @@
             reset() {
                 for (var i = 1; i < 999999; i++) { window.clearInterval(i); }
                 document.getElementById('beep').pause();
+                document.getElementById('beep').currentTime = 0;
                 this.setState({
                     break: 5,
                     session: 25,
@@ -118,13 +119,13 @@
                         document.getElementById('beep').play();
                         if (state.currentTimber == 'Session') {
                             return {
-                                currentMinute: state.break - 1,
-                                currentSecond: 59,
+                                currentMinute: state.break,
+                                currentSecond: 0,
                                 currentTimber: 'Break'
                             }
                         } else {
                             return {
-                                currentMinute: state.session - 1,
+                                currentMinute: state.session,
                                 currentSecond: 59,
                                 currentTimber: 'Session'
                             }
