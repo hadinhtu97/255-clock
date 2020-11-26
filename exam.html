@@ -181,14 +181,14 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="break-length" value={this.state.break}>
-                                        <button id="break-decrement" onClick={this.breakDecrement}><i className="fas fa-arrow-down"></i></button> {this.state.break} <button id="break-increment" onClick={this.breakIncrement}><i className="fas fa-arrow-up"></i></button>
-                                    </div>
+                                    <button id="break-increment" onClick={this.breakIncrement}><i className="fas fa-arrow-up"></i></button>
+                                    <div id="break-length" value={this.state.break}>{this.state.break}</div>
+                                    <button id="break-decrement" onClick={this.breakDecrement}><i className="fas fa-arrow-down"></i></button>
                                 </td>
                                 <td>
-                                    <div id="session-length" value={this.state.session}>
-                                        <button id="session-decrement" onClick={this.sessionDecrement}><i className="fas fa-arrow-down"></i></button> {this.state.session} <button id="session-increment" onClick={this.sessionIncrement}><i className="fas fa-arrow-up"></i></button>
-                                    </div>
+                                    <button id="session-increment" onClick={this.sessionIncrement}><i className="fas fa-arrow-up"></i></button>
+                                    <div id="session-length" value={this.state.session}>{this.state.session}</div>
+                                    <button id="session-decrement" onClick={this.sessionDecrement}><i className="fas fa-arrow-down"></i></button>
                                 </td>
                             </tr>
                         </table>
