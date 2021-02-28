@@ -32,3 +32,6 @@ An automatic timer between work and rest times
 26. When a countdown reaches zero (NOTE: timer MUST reach 00:00), a sound indicating that time is up should play. This should utilize an HTML5 audio tag and have a corresponding `id="beep"`.
 27. The audio element with `id="beep"` must be 1 second or longer.
 28. The audio element with id of beep must stop playing and be rewound to the beginning when the element with the id of reset is clicked.
+
+### Demo
+[Link Demo](https://codepen.io/hadinhtu97/full/rNMBXyE)
